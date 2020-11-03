@@ -13,4 +13,9 @@ class ComicController extends Controller
         
         return view ('index', compact('comics'));
     }
+
+    public function indexAjax()
+    {
+        return view('index-ajax');
+    }
 }

@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/comics', 'ComicController@index');
 
 Route::get('/genres', 'GenreController@index');
+
+Route::get('comics-ajax', 'ComicController@indexAjax');
