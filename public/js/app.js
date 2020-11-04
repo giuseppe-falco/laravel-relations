@@ -35290,17 +35290,22 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+/* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bootstrap__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js");
+/* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(handlebars__WEBPACK_IMPORTED_MODULE_2__);
 
-var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
-var hbs = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js");
 
-$(function () {
-  $.ajax({
+jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
+  Object(jquery__WEBPACK_IMPORTED_MODULE_1__["ajax"])({
     'url': 'http://localhost:8000/api/comics',
     'method': 'GET',
     'success': function success(data) {
@@ -35314,11 +35319,11 @@ $(function () {
 
 function renderComics(data) {
   var source = document.getElementById("entry-template").innerHTML;
-  var template = hbs.compile(source);
+  var template = Object(handlebars__WEBPACK_IMPORTED_MODULE_2__["compile"])(source);
 
   for (var i = 0; i < data.length; i++) {
     var html = template(data[i]);
-    $('.container').append(html);
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.container').append(html);
   }
 }
 

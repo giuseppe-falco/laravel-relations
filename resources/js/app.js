@@ -1,10 +1,10 @@
-require('./bootstrap');
-const $ = require('jquery');
-const hbs = require('handlebars');
+import './bootstrap';
+import $, { ajax } from 'jquery';
+import { compile } from 'handlebars';
 
 $(()=>{
      
-    $.ajax({
+    ajax({
         'url' : 'http://localhost:8000/api/comics',
         'method' : 'GET',
         'success' : function(data){
@@ -20,7 +20,7 @@ $(()=>{
     function renderComics(data){
 
         var source = document.getElementById("entry-template").innerHTML;
-        var template = hbs.compile(source);
+        var template = compile(source);
         
         for(var i=0; i < data.length; i++){
 
