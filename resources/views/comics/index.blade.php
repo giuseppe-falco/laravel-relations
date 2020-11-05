@@ -3,7 +3,7 @@
         <h1>Titolo: {{$comic->title}}</h1>
         <img src="{{$comic->cover}}" alt="">
         <h2>Titolo originale: {{$comic->original_title}}</h2>
-        <h3>Autore: {{$author ?? ''->author}}</h3>
+        <h3>Autore: {{$comic->author->name}} {{$comic->author->lastname}}</h3>
         <p>Numero: {{$comic->number}}</p>
         <p>Numero pagine: {{$comic->n_pages}}</p>
         <p>Livello lettura: {{$comic->reading}}</p>

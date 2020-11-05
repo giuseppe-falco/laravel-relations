@@ -19,4 +19,10 @@ class Comic extends Model
         "release",
         "cover",
     ];
+
+    public function author()
+    {
+        return $this->belongsTo('App\Author');
+    }
+
 }
